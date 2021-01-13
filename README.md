@@ -6,6 +6,8 @@
 Provides attributes such as speed, Hp, attack, etc.
 to compare 
 
+Click [this](https://justinclu.shinyapps.io/project/) to view application
+
 
 ## At the beginning of their quest, Trainers are given a starter Pokémon or first partner Pokémon
 -----------------------------------------------------------------------------------------------------------
