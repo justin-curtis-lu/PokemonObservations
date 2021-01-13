@@ -1,5 +1,5 @@
 # Observation of starter Pokemon characteristics
- Application observes the characteristics of the starter Pokemon
+ Simple application that observes the characteristics of the starter Pokemon
  - limited to generations (1-6)
 
 Provides attributes such as speed, Hp, attack, etc.
