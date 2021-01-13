@@ -1,0 +1,21 @@
+#,Name,Type ,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed,Generation
+1,Bulbasaur,Grass,45,49,49,65,65,45,1
+4,Charmander,Fire,39,52,43,60,50,65,1
+7,Squirtle,Water,44,48,65,50,64,43,1
+25,Pikachu,Electric,35,55,40,50,50,90,1
+133,Eevee,Normal,55,55,50,45,65,55,1
+152,Chikorita,Grass,45,49,65,49,65,45,2
+155,Cyndaquil,Fire,39,52,43,60,50,65,2
+158,Totodile,Water,50,65,64,44,48,43,2
+252,Treecko,Grass,40,45,35,65,55,70,3
+255,Torchic,Fire,45,60,40,70,50,45,3
+258,Mudkip,Water,50,70,50,50,50,40,3
+387,Turtwig,Grass,55,68,64,45,55,31,4
+390,Chimchar,Fire,44,58,44,58,44,61,4
+393,Piplup,Water,53,51,53,61,56,40,4
+495,Snivy,Grass,45,45,55,45,55,63,5
+498,Tepig,Fire,65,63,45,45,45,45,5
+501,Oshawott,Water,55,55,45,63,45,45,5
+650,Chespin,Grass,56,61,65,48,45,38,6
+653,Fennekin,Fire,40,45,40,62,60,60,6
+656,Froakie,Water,41,56,40,62,44,71,6
