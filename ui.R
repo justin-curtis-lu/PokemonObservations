@@ -7,11 +7,7 @@ selectValues = colnames(data)
 # Ignore the # and Name values for select options
 selectValues <- selectValues[! selectValues %in% c('X.', 'Name', 'Generation')]
 
-
 ui <- fluidPage(
-  
-  includeCSS("css/styles.css"),
-  
   column(
     12,
     align = "center",
@@ -22,7 +18,7 @@ ui <- fluidPage(
   tabPanel(
     "Visualization",
     titlePanel("What are the Statistics of the starter Pokemon?"),
-    p("Select which attribute you would like to see."),
+    p("Select which attribute to plot."),
   ),
   
   sidebarPanel(
@@ -36,5 +32,48 @@ ui <- fluidPage(
   
   mainPanel(
     plotOutput("plot")
+  ),
+  
+  tabPanel(
+    "Visualization",
+    titlePanel("Starter Pokemon Appearance"),
+    p("Select an indivual Pokemon you would like to view"),
+  ),
+
+  sidebarPanel(
+    selectInput("Pokemon", "Choose a Pokemon:",
+        list(`Generation1` = list('Bulbasaur',
+                                  'Charmander',
+                                  'Squirtle',
+                                  'Pikachu',
+                                  'Eevee'),
+             `Generation2` = list('Chikorita',
+                                  'Cyndaquil',
+                                  'Totodile'),
+             `Generation3` = list('Treecko',
+                                  'Torchic',
+                                  'Mudkip'),
+             `Generation4` = list('Turtwig',
+                                  'Chimchar',
+                                  'Piplup'),
+             `Generation5` = list('Snivy',
+                                  'Tepig',
+                                  'Oshawott'),
+             `Generation6` = list('Chespin',
+                                  'Fennekin',
+                                  'Froakie')
+          )
+      )
+  ),
+
+  mainPanel(
+    fluidRow(
+      column(
+        7,
+        align = "right",
+        plotOutput("Image")
+        
+      )
+    )
   )
 )

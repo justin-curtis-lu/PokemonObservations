@@ -1,4 +1,5 @@
 # Server
+
 library(ggplot2)
 
 # Read in our pokemon data set
@@ -16,4 +17,13 @@ server <- function(input, output) {
     labs(x="Name", y=input$y_var) + 
     coord_flip() 
   })
+  
+  output$Image <- renderImage({
+    filename <- normalizePath(file.path('./www',
+                                        paste(input$Pokemon, '.png', sep='')))
+    list(src = filename, width = 400,
+         height = 300)
+  }, deleteFile = FALSE)
 }
+    
+
