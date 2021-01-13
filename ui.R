@@ -1,30 +1,40 @@
 #UI
 
-# Read in our pokemon data set
+# Read in our pokemon data set ( For drop down selection)
 data <- read.csv("data/Pokemon.csv")
-select_values = colnames(data)
+selectValues = colnames(data)
 
 # Ignore the # and Name values for select options
-select_values <- select_values[! select_values %in% c('X.', 'Name')]
+selectValues <- selectValues[! selectValues %in% c('X.', 'Name', 'Generation')]
 
 
 ui <- fluidPage(
-  img(src = "pokemon.png", height = 400, width = 800, ),
-  br(), br(),
+  
+  includeCSS("css/styles.css"),
+  
+  column(
+    12,
+    align = "center",
+    offest = 1,
+    img(src = "pokemon2.png", height = 400, width = 800 )
+  ),
+
   tabPanel(
     "Visualization",
-    titlePanel("What are the Characteristics of the starter Pokemon?"),
-    p("Use the selector input below to choose which variable you would like to see."),
+    titlePanel("What are the Statistics of the starter Pokemon?"),
+    p("Select which attribute you would like to see."),
   ),
+  
   sidebarPanel(
     selectInput(
       "y_var",
-      label = "Y Variable",
-      choices = select_values,
-      selected = "Speed"
+      label = "Attribute",
+      choices = selectValues,
+      selected = "Attack"
     )
   ),
+  
   mainPanel(
     plotOutput("plot")
-  ),
+  )
 )
