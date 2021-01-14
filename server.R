@@ -1,5 +1,4 @@
 # Server
-
 library(ggplot2)
 
 # Read in our pokemon data set

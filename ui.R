@@ -37,7 +37,7 @@ ui <- fluidPage(
   tabPanel(
     "Visualization",
     titlePanel("Starter Pokemon Appearance"),
-    p("Select an indivual Pokemon you would like to view"),
+    p("Select an individual Pokemon you would like to view"),
   ),
 
   sidebarPanel(
